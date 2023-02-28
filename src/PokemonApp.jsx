@@ -7,7 +7,7 @@ export const PokemonApp = () => {
 
 
 const { page, pokemons = [], isLoading } = useSelector( state => state.pokemons )
-console.log(page, pokemons, isLoading)
+// console.log(page, pokemons, isLoading)
 
  const dispatch = useDispatch();
 
@@ -27,7 +27,7 @@ useEffect(() => {
         {pokemons.map(pokemon => <li key={pokemon.name}>{pokemon.name}</li>)}
       </ul>
       <button 
-          disabled= { isLoading git }
+          disabled= { isLoading }
           onClick={ () => dispatch( getPokemons(page) )}
       >
       Next</button>
